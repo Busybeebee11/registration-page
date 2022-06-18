@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: hsl(0, 100%, 74%);
+}
+
+.main-container {
+    background-image: url("bg-intro-desktop.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 10vw;
+
+}
+
+.child-1 {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+h1 {
+    font-size: 2.9rem;
+    color: white;
+    font-weight: 700;
+}
+
+.child-1 p {
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    margin-top: 1.3rem;
+}
+
+.child-2 {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.alert {
+    display: inline-block;
+    background-color: hsl(248, 32%, 49%);
+    box-shadow: 0 1px hsl(246, 25%, 77%);
+    color: #ccc;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.alert span {
+    color: white;
+    font-weight: 500;
+}
+
+.alert:hover {
+    background-color: hsl(248, 32%, 49%);
+    box-shadow: hsl(246, 25%, 77%);
+    color: white;
+    border: thin solid #ccc;
+}
+    
+.register-field {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.6rem;
+}
+
+.register-field p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0.5rem;
+    color: #ccc;
+}
+
+.register-field span {
+    color:hsl(0, 100%, 74%);
+    font-weight: 700;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+    border: thin solid #cccc;
+    border-radius: 0.3rem;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input:focus {
+    outline: 0;
+    border: 2px solid hsl(0, 100%, 74%)
+}
+
+input:invalid:focus {
+    background-position-x: 95%;
+    border: thin solid hsl(0, 100%, 74%);
+    color:hsl(0, 100%, 74%);
+    background-image: url("icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+input[type="submit"] {
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    border: 0;
+    outline: 0;
+    font-weight: 600;
+    border-bottom: 0.2rem solid hsl(154, 54%, 45%);
+}
+
+input[type="submit"]:hover {
+    color: hsl(154, 59%, 51%);
+    background-color: white;
+    border: thin solid #ccc;
+    border-bottom: 0.2rem solid hsl(154, 67%, 32%);
+}
+
+/* RESPONSIVENESS & MEDIA QUERIES */
+/* MOBILE VIEW */
+
+@media screen and (max-width:600px) {
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0.9rem;
+        background-image: url("bg-intro-mobile.png");
+    }
+
+    .child-1 {
+        width: 90%;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: white;
+        font-weight: 700;
+    } 
+
+    .child-1 p {
+        font-size: 15px;
+        font-weight: 400;
+    }
+    
+    .child-2 {
+        width: 90%;
+        padding: 0.5rem;
+    }
+
+    .alert {
+        margin-top: 2rem;
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .register-field p {
+        font-size: 0.7rem;
+        font-weight: 400;
+        text-align: center;
+        margin: 0.5rem;
+        color: #ccc;
+    }
+}
